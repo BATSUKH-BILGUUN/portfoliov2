@@ -1,0 +1,61 @@
+#root {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+body {
+  background: radial-gradient(1000px 600px at 10% -10%, rgba(124, 58, 237, 0.28), transparent),
+              radial-gradient(900px 600px at 110% 10%, rgba(6, 182, 212, 0.25), transparent),
+              linear-gradient(180deg, #0b0b0f 0%, #0e0e14 100%);
+}
+
+main {
+  display: block;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card h3 {
+  margin: 0 0 6px 0;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tags span {
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
